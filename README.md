@@ -1,22 +1,27 @@
-# Manjaro-minimal-bootsplash
+# Manjaro Minimal Bootsplash
 
-Kernel Bootsplash theme for manjaro Linux using Manjaro logo and a custom spinner.
+Plymouth theme for manjaro Linux using Manjaro logo and a custom spinner.
 
-This project is a fork of the follwing project:
-https://github.com/trdmm/bootsplash-theme-alien
+This project is a fork of [this project](https://github.com/trdmm/bootsplash-theme-alien).
 
 The spinner base gif was created using Preloaders.net and heavily modified afterwards.
 
 
-# Installation:
+## Installation:
 
-- `git clone https://github.com/trdmm/manjaro-minimal-bootsplash.git`
+- use `git clone https://github.com/funinkina/manjaro-minimal-bootsplash.git` to clone this repository to your home folder.
+  
 - `cd manjaro-minimal-bootsplash`
+  
 - run `chmod +x bootsplash-minimal.sh`
 - run `chmod +x bootsplash-packer`
-- run `./bootsplash-minimal.sh` to generate STL model.
-- run `makepkg -s` to create an Arch package and install it with `pacman -U $package_name`or alternatively make and install with one single command: `makepkg -sci`
-- append `manjaro-minimal-bootsplash` hook at the end of HOOKS string in `/etc/mkinitcpio.conf`
-- add `bootsplash.bootfile=bootsplash-themes/minimal/bootsplash` at the end of `GRUB_CMDLINE_LINUX` string in `/etc/default/grub` and don't forget to remove the `quiet` parameter!
+- run `./bootsplash-minimal.sh` to generate the STL model.
+- run `makepkg -sci` to create and and install the package automatically _(alternatively you can use `makepkg -s` to create the arch package and install it with: `pacman -U $package_name`)_.
+- append `manjaro-minimal-bootsplash` hook at the end of HOOKS string in `/etc/mkinitcpio.conf`  
+  it should look something like this:
+  >HOOKS="base udev autodetect modconf block keyboard keymap consolefont plymouth resume filesystems fsck manjaro-minimal-bootsplash"
+- add `bootsplash.bootfile=bootsplash-themes/minimal/bootsplash` at the end of `GRUB_CMDLINE_LINUX` string in `/etc/default/grub` and don't forget to remove the `quiet` parameter!  
+  it should look something like this:  
+  >GRUB_CMDLINE_LINUX_DEFAULT="bootsplash.bootfile=bootsplash-themes/minimal/bootsplash"
 - run `sudo mkinitcpio -P`
 - run `sudo update-grub`
