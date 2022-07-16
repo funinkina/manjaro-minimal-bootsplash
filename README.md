@@ -1,6 +1,6 @@
 # Manjaro Minimal Bootsplash
 
-Plymouth theme for manjaro Linux using Manjaro logo and a custom spinner.
+Plymouth theme for Manjaro linux using slightly tweaked manjaro logo and a custom spinner.
 
 This project is a fork of [this project](https://github.com/trdmm/bootsplash-theme-alien).
 
