@@ -6,6 +6,8 @@ This project is a fork of [this project](https://github.com/trdmm/bootsplash-the
 
 The spinner base gif was created using Preloaders.net and heavily modified afterwards.
 
+## Preview:
+![preview](https://github.com/funinkina/manjaro-minimal-bootsplash/blob/main/preview.gif)
 
 ## Installation:
 
