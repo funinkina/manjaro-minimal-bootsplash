@@ -1,0 +1,11 @@
+build() {
+        # add alien bootsplash
+	add_binary /usr/lib/firmware/bootsplash-themes/minimal/bootsplash /usr/lib/firmware/bootsplash-themes/minimal/bootsplash
+}
+
+help() {
+	echo "This hook includes the initramfs image."
+}
+
+# vim: set ft=sh:
+#EOF
